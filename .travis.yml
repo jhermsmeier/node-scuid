@@ -1,0 +1,12 @@
+language: node_js
+sudo: false
+notifications:
+  email: false
+node_js:
+  - stable
+  - "6"
+  - "4"
+branches:
+  only:
+    - master
+script: npm test
