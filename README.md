@@ -28,21 +28,21 @@ var scuid = require( 'scuid' )
 
 ```js
 var id = scuid()
-> 'ciuwr5ekh00044pe13ruhsmjpq6'
+> 'ciux3hs0x0000io10cusdm8r2'
 ```
 
 **Generate a slug**
 
 ```js
 var slug = scuid.slug()
-> 'zf00074rjj'
+> '6x1i0r0'
 ```
 
 **Get the process' fingerprint**
 
 ```js
 var fingerprint = scuid.fingerprint()
-> '5m813r'
+> 'io10'
 ```
 
 **Use a custom (P)RNG**
