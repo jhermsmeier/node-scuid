@@ -1,6 +1,6 @@
 {
   "name": "scuid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Collision-resistant IDs optimized for horizontal scaling and performance",
   "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de)",
   "license": "MIT",
