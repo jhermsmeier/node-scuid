@@ -1,15 +1,13 @@
 var test = require( 'tape-catch' )
 var scuid = require( '..' )
 
-var COLL_ITERATIONS = 2000000
-
-function collide( fn ) {
+function collide( fn, iterations ) {
 
   var ids = {}
   var pass = true
-  var id
+  var id = ''
 
-  for( var i = 0; i < COLL_ITERATIONS; i++ ) {
+  for( var i = 0; i < iterations; i++ ) {
     id = fn()
     if( ids[ id ] == null ) {
       ids[ id ] = id
@@ -42,8 +40,8 @@ test( 'scuid', function( assert ) {
 
 test( 'collision resistance', function( assert ) {
 
-  assert.ok( collide( scuid ), 'IDs should not collide' )
-  assert.ok( collide( scuid.slug ), 'slugs should not collide' )
+  assert.ok( collide( scuid, 2000000 ), 'IDs should not collide' )
+  assert.ok( collide( scuid.slug, 1000000 ), 'slugs should not collide' )
   assert.end()
 
 })

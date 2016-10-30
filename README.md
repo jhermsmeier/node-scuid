@@ -80,7 +80,8 @@ var scuid = require( 'scuid' ).create({
 
 ## Tests
 
-Just like `cuid`, collision resistance for both – slugs and IDs – is tested over 2 million iterations.
+Just like `cuid`, collision resistance for both – slugs and IDs – is tested
+over 1 million and 2 million iterations respectively.
 To run the tests, run:
 
 ```
