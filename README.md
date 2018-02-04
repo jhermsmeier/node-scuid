@@ -8,7 +8,7 @@ Collision-resistant IDs optimized for horizontal scaling and performance.
 
 A slim, alternative, and compatible implementation of [cuid] for node,
 also featuring a wide range of options, as well as custom random number generator support.
-It can serve as a drop-in replacement, and is also ~3.5x faster than [cuid].
+It can serve as a drop-in replacement, and is also faster than [cuid].
 
 [cuid]: https://github.com/ericelliott/cuid
 
@@ -64,7 +64,7 @@ var scuid = require( 'scuid' ).create({
 
 **Use other custom options**
 
-Note that fiddeling with these might make your IDs incompatible with [cuid]s guarantees.
+Note that fiddeling with these might make your IDs incompatible with [cuid]'s guarantees.
 
 ```js
 var scuid = require( 'scuid' ).create({
@@ -96,12 +96,12 @@ $ npm run benchmark
 
 ```
 scuid
-  id ............................................. 778,193 op/s
-  slug ........................................... 913,403 op/s
-  fingerprint .................................... 126,194,278 op/s
+  id ............................................. 573,618 op/s
+  slug ........................................... 673,732 op/s
+  fingerprint .................................... 131,156,394 op/s
 
 cuid
-  id ............................................. 222,083 op/s
-  slug ........................................... 152,579 op/s
-  fingerprint .................................... 376,216 op/s
+  id ............................................. 445,260 op/s
+  slug ........................................... 531,770 op/s
+  fingerprint .................................... 125,159,685 op/s
 ```
