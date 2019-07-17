@@ -67,8 +67,8 @@ test( 'createFingerprint', function (assert) {
 
 test( 'collision resistance', function( assert ) {
 
-  assert.ok( collide( scuid, 2000000 ), 'IDs should not collide' )
-  assert.ok( collide( scuid.slug, 1000000 ), 'slugs should not collide' )
+  assert.ok( collide( scuid, 2000000 ), 'IDs should not collide within at least 2 million' )
+  assert.ok( collide( scuid.slug, 1000000 ), 'slugs should not collide within at least 1 million' )
   assert.end()
 
 })
