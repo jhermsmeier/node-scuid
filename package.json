@@ -17,10 +17,10 @@
   "main": "lib/scuid.js",
   "dependencies": {},
   "devDependencies": {
-    "cuid": "^2.0.2",
-    "matcha": "^0.7.0",
+    "cuid": "^2.1.6",
+    "nanobench": "^2.1.1",
     "tap-diff": "^0.1.1",
-    "tape": "^4.8.0",
+    "tape": "^4.11.0",
     "tape-catch": "^1.0.6"
   },
   "peerDependencies": {},
@@ -34,7 +34,11 @@
     "url": "https://github.com/jhermsmeier/node-scuid/issues"
   },
   "scripts": {
-    "benchmark": "matcha --reporter plain",
+    "benchmark": "nanobench benchmark",
+    "benchmark-scuid": "nanobench benchmark/index.js > benchmark/output-scuid",
+    "benchmark-cuid": "nanobench benchmark/cuid.js > benchmark/output-cuid",
+    "benchmark-compare": "nanobench-compare benchmark/output-scuid benchmark/output-cuid",
+    "compare": "npm run benchmark-scuid; npm run benchmark-cuid; npm run benchmark-compare",
     "test": "tape test/*.js | tap-diff"
   }
 }

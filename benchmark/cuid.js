@@ -1,5 +1,5 @@
 var bench = require( 'nanobench' )
-var scuid = require( '..' )
+var cuid = require( 'cuid' )
 
 const ITERATIONS = 1000000
 
@@ -7,7 +7,7 @@ bench( `id ⨉ ${ITERATIONS}`, function( run ) {
   var id = ''
   run.start()
   for( var i = 0; i < ITERATIONS; i++ ) {
-    id = scuid()
+    id = cuid()
   }
   run.end()
 })
@@ -16,7 +16,7 @@ bench( `slug ⨉ ${ITERATIONS}`, function( run ) {
   var id = ''
   run.start()
   for( var i = 0; i < ITERATIONS; i++ ) {
-    id = scuid.slug()
+    id = cuid.slug()
   }
   run.end()
 })
@@ -25,7 +25,7 @@ bench( `fingerprint ⨉ ${ITERATIONS}`, function( run ) {
   var id = ''
   run.start()
   for( var i = 0; i < ITERATIONS; i++ ) {
-    id = scuid.fingerprint()
+    id = cuid.fingerprint()
   }
   run.end()
 })
